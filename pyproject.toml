@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "alex the chatbot"
+version = "0.1.0"
+description = "Api Backend for 'Alex' chatbot"
+authors = ["Petros Chol <petroschol123@yahoo.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "0.115.12"}
+uvicorn = {extras = ["standard"], version = "0.30.6"}
+gunicorn = "22.0.0"
+google-generativeai = "0.7.2"
+instructor = "1.7.9"
+sqlalchemy = {extras = ["asyncio"], version = "2.0.40"}
+sqlmodel = "0.0.19"
+asyncpg = "0.29.0"
+pgvector = "0.2.5"
+redis = {extras = ["hiredis"], version = "5.2.1"}
+pydantic-settings = "2.9.1"
+python-dotenv = "1.1.0"
+fastapi-limiter = "0.1.6"
+tzdata = "2025.2"
+protobuf = "4.25.6"
+python-json-logger = "3.3.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.3.5"
+pytest-asyncio = "0.23.8"
+httpx = "0.27.2"
+pytest-mock = "3.14.0"
+black = "24.10.0"
+ruff = "0.4.10"
+mypy = "1.15.0"
+pre-commit = "3.8.0"
+pytest-cov = "6.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
